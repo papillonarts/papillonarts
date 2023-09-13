@@ -1,1 +1,0 @@
-export { getAppMockStore } from './mock'
