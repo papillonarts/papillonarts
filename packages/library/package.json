@@ -1,0 +1,39 @@
+{
+  "name": "@papillonarts/library",
+  "version": "0.0.0",
+  "description": "Papillon Arts Library",
+  "homepage": "https://github.com/papillonarts/papillonarts/tree/master/packages/library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papillonarts/papillonarts.git",
+    "directory": "packages/library"
+  },
+  "main": "build/index.js",
+  "module": "src/index.js",
+  "files": [
+    "a11y/",
+    "array/",
+    "auth/",
+    "boolean/",
+    "browser/",
+    "date/",
+    "event/",
+    "hooks/",
+    "number/",
+    "object/",
+    "pagination/",
+    "sort/",
+    "store/",
+    "string/",
+    "README.md"
+  ],
+  "scripts": {
+    "clean-up": "rm -rf build node_modules package-lock.json",
+    "install-packages": "npm i",
+    "install-papillonarts-latest": "echo \"library skipping install-papillonarts-latest\" && exit 0",
+    "build": "rm -rf build && babel --copy-files --no-copy-ignored --out-dir build src --ignore **/__tests__",
+    "build-test": "npm run build",
+    "build-acceptance": "npm run build",
+    "build-release": "npm run build"
+  }
+}
