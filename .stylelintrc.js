@@ -1,0 +1,20 @@
+// const stylelintSetup = require('@papillonarts/setup/stylelint')
+
+// module.exports = { ...stylelintSetup }
+
+module.exports = {
+  extends: ['stylelint-config-standard'],
+  plugins: ['stylelint-order', 'stylelint-prettier', 'stylelint-scss'],
+  rules: {
+    'alpha-value-notation': null,
+    'at-rule-no-unknown': null,
+    'color-function-notation': null,
+    'declaration-empty-line-before': null,
+    'keyframes-name-pattern': null,
+    'prettier/prettier': true,
+    'rule-empty-line-before': null,
+    'selector-class-pattern': null,
+    'annotation-no-unknown': null,
+    'import-notation': 'string',
+  },
+}
