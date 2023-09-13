@@ -1,0 +1,32 @@
+{
+  "name": "@papillonarts/setup",
+  "version": "0.0.0",
+  "description": "Papillon Arts Setup",
+  "homepage": "https://github.com/papillonarts/papillonarts/tree/master/packages/setup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papillonarts/papillonarts.git",
+    "directory": "packages/setup"
+  },
+  "main": "build/index.js",
+  "module": "src/index.js",
+  "files": [
+    "babel/",
+    "eslint/",
+    "jest/",
+    "prettier/",
+    "storybook/",
+    "stylelint/",
+    "webpack/",
+    "README.md"
+  ],
+  "scripts": {
+    "clean-up": "rm -rf build node_modules package-lock.json",
+    "install-packages": "npm i",
+    "install-papillonarts-latest": "echo \"setup skipping install-papillonarts-latest\" && exit 0",
+    "build": "rm -rf build && babel --copy-files --no-copy-ignored --out-dir build src --ignore **/__tests__",
+    "build-test": "npm run build",
+    "build-acceptance": "npm run build",
+    "build-release": "npm run build"
+  }
+}
