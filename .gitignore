@@ -1,0 +1,35 @@
+# MacOS
+.DS_Store
+
+# Sublime Text
+app.sublime-project
+app.sublime-workspace
+
+# Storybook
+.storybook-static-develop
+.storybook-static-release
+
+# NPM Papillon Arts
+.coverage
+node_modules
+.env
+.npmrc
+codecov
+lerna-debug.log
+npm-debug.log
+
+# NPM Papillon Arts Components Package
+packages/components/build
+packages/components/node_modules
+
+# NPM Papillon Arts CSS Package
+packages/CSS/build
+packages/CSS/node_modules
+
+# NPM Papillon Arts Library Package
+packages/library/build
+packages/library/node_modules
+
+# NPM Papillon Arts Setup Package
+packages/setup/build
+packages/setup/node_modules
