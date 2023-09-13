@@ -4,11 +4,12 @@
 
 function getJestSetup({ testPathIgnorePatterns, coverageDirectory, collectCoverage, collectCoverageFrom, coverageThreshold }) {
   return {
-    testMatch: ['**/?(*.)test.js?(x)'],
+    testMatch: ['**/?(*.)test.js?(x)', '**/?(*.)test.ts?(x)'],
     testPathIgnorePatterns,
     roots: ['<rootDir>'],
     transform: {
-      '^.+\\.jsx?$': 'babel-jest',
+      '^.+\\.(js|jsx)$': 'babel-jest',
+      '^.+\\.(ts|tsx)$': 'babel-jest',
       '^.+\\.mdx$': '@storybook/addon-docs/jest-transform-mdx',
     },
     coverageDirectory,
@@ -20,7 +21,7 @@ function getJestSetup({ testPathIgnorePatterns, coverageDirectory, collectCovera
       '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|md)$': '<rootDir>/.mock/file.js',
       '^.+\\.(css|less|scss|md)$': 'identity-obj-proxy',
     },
-    moduleFileExtensions: ['js', 'jsx'],
+    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
     coverageThreshold,
   }
 }
