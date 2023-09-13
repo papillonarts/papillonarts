@@ -1,0 +1,31 @@
+{
+  "name": "@papillonarts/components",
+  "version": "0.0.0",
+  "description": "Papillon Arts Components",
+  "homepage": "https://github.com/papillonarts/papillonarts/tree/master/packages/components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papillonarts/papillonarts.git",
+    "directory": "packages/components"
+  },
+  "main": "build/index.js",
+  "module": "src/index.js",
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "scripts": {
+    "clean-up": "rm -rf build node_modules package-lock.json",
+    "install-packages": "npm i",
+    "install-papillonarts-latest": "npm i \"@papillonarts/css\"@latest && npm i \"@papillonarts/library\"@latest",
+    "remove-test-folders": "rm -rf src/**/**/__tests__ && rm -rf src/**/**/**/__tests__ && rm -rf src/primer/Concept",
+    "remove-snapshot-folders": "rm -rf src/**/**/__tests__/__snapshots__",
+    "remove-build-folder": "rm -rf build",
+    "transpile": "babel --copy-files --no-copy-ignored --out-dir build src --ignore **/__tests__",
+    "remove-markdown-files": "find build -maxdepth 3 -type f -name \"*.md\" -delete",
+    "build": "npm-run-all remove-snapshot-folders remove-build-folder transpile remove-markdown-files",
+    "build-test": "npm run build",
+    "build-acceptance": "npm run build",
+    "build-release": "npm run build"
+  }
+}
