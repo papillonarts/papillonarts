@@ -1,0 +1,26 @@
+{
+  "name": "@papillonarts/css",
+  "version": "0.0.0",
+  "description": "Papillon Arts CSS",
+  "homepage": "https://github.com/papillonarts/papillonarts/tree/master/packages/css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/papillonarts/papillonarts.git",
+    "directory": "packages/css"
+  },
+  "main": "build/index.scss",
+  "module": "src/index.js",
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "scripts": {
+    "clean-up": "rm -rf build node_modules package-lock.json",
+    "install-packages": "npm i",
+    "install-papillonarts-latest": "echo \"css skipping install-papillonarts-latest\" && exit 0",
+    "build": "rm -rf build && babel --copy-files --no-copy-ignored --out-dir build src",
+    "build-test": "npm run build",
+    "build-acceptance": "npm run build",
+    "build-release": "npm run build"
+  }
+}
