@@ -1,9 +1,11 @@
+import { indexItemsType, itemType, itemsType } from '../types'
+
 import { getCurrentIndex, getIndexItems, getIndexItemsWithSelected, getRandomItemFromArray, getRange } from '../index'
 
 describe('index', () => {
   describe('getCurrentIndex()', () => {
     test('must return current item index when there is a current item', () => {
-      const indexItems = [
+      const indexItems: indexItemsType = [
         { isCurrent: true, index: 0 },
         { isCurrent: false, index: 1 },
       ]
@@ -11,7 +13,7 @@ describe('index', () => {
     })
 
     test('must return -1 when there is no current item', () => {
-      const indexItems = [
+      const indexItems: indexItemsType = [
         { isCurrent: false, index: 0 },
         { isCurrent: false, index: 1 },
       ]
@@ -19,17 +21,21 @@ describe('index', () => {
     })
 
     test('must return -1 when there are no index items', () => {
-      let indexItems
+      let indexItems!: indexItemsType
       expect(getCurrentIndex(indexItems)).toEqual(-1)
     })
   })
 
   describe('getIndexItems()', () => {
-    const items = [{ fantasticKey1: 'fantastic-value-1' }, { fantasticKey2: 'fantastic-value-2' }, { fantasticKey3: 'fantastic-value-3' }]
+    const items: itemsType = [
+      { fantasticKey1: 'fantastic-value-1' },
+      { fantasticKey2: 'fantastic-value-2' },
+      { fantasticKey3: 'fantastic-value-3' },
+    ]
 
     test('must return items with index when there are items', () => {
-      const itemsWithoutIndex = [items[0], items[1], items[2]]
-      const itemsWithIndex = [
+      const itemsWithoutIndex: itemsType = [items[0], items[1], items[2]]
+      const itemsWithIndex: itemsType = [
         { ...items[0], index: 0 },
         { ...items[1], index: 1 },
         { ...items[2], index: 2 },
@@ -39,13 +45,13 @@ describe('index', () => {
     })
 
     test('must return empty array when items are empty', () => {
-      const itemsWithoutIndex = []
+      const itemsWithoutIndex: itemsType = []
 
       expect(getIndexItems(itemsWithoutIndex)).toEqual([])
     })
 
     test('must return empty array when there are no items', () => {
-      let itemsWithoutIndex
+      let itemsWithoutIndex!: itemsType
 
       expect(getIndexItems(itemsWithoutIndex)).toEqual([])
     })
@@ -53,10 +59,13 @@ describe('index', () => {
 
   describe('getIndexItemsWithSelected()', () => {
     test('must return index items with selected when there are items', () => {
-      const selectedItem = { fantasticKey3: 'fantastic-value-3', index: 2 }
-      const items = [{ fantasticKey1: 'fantastic-value-1' }, { fantasticKey2: 'fantastic-value-2' }, selectedItem]
-      const indexItems = [{ ...items[0], index: 0 }, { ...items[1], index: 1 }, { ...selectedItem }]
-      const indexItemsWithSelected = [
+      const selectedItem: itemType = {
+        fantasticKey3: 'fantastic-value-3',
+        index: 2,
+      }
+      const items: itemsType = [{ fantasticKey1: 'fantastic-value-1' }, { fantasticKey2: 'fantastic-value-2' }, selectedItem]
+      const indexItems: indexItemsType = [{ ...items[0], index: 0 }, { ...items[1], index: 1 }, { ...selectedItem }]
+      const indexItemsWithSelected: indexItemsType = [
         { ...items[0], index: 0, isSelected: false },
         { ...items[1], index: 1, isSelected: false },
         { ...selectedItem, isSelected: true },
@@ -66,13 +75,13 @@ describe('index', () => {
     })
 
     test('must return empty array when items are empty', () => {
-      const indexItems = []
+      const indexItems: itemsType = []
 
       expect(getIndexItemsWithSelected(indexItems, expect.anything())).toEqual([])
     })
 
     test('must return empty array when there are no items', () => {
-      let indexItems
+      let indexItems!: indexItemsType
 
       expect(getIndexItemsWithSelected(indexItems, expect.anything())).toEqual([])
     })
@@ -87,13 +96,17 @@ describe('index', () => {
     afterEach(() => jest.clearAllMocks())
 
     test('must return random item from array when array has items', () => {
-      const array = [{ fantasticKey1: 'fantastic-value-1' }, { fantasticKey2: 'fantastic-value-2' }, { fantasticKey3: 'fantastic-value-3' }]
+      const array: itemType[] = [
+        { fantasticKey1: 'fantastic-value-1' },
+        { fantasticKey2: 'fantastic-value-2' },
+        { fantasticKey3: 'fantastic-value-3' },
+      ]
 
       expect(getRandomItemFromArray(array)).toEqual(array[0])
     })
 
     test('must return undefined when array has no items', () => {
-      const array = []
+      const array: itemType[] = []
 
       expect(getRandomItemFromArray(array)).toBeUndefined()
     })
