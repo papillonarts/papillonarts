@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-param-reassign */
 /* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-var-requires */
 import { isEmptyObject } from '@papillonarts/library/object'
 
 export function getStorybookMainSetup({ storiesBasePath, includeBasePath, modulesBasePath }) {

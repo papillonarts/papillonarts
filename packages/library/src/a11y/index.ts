@@ -5,7 +5,8 @@
 
 export function checkAccessibilityIssues(react: unknown, reactDOM: unknown, delay: number) {
   if (process.env.NODE_ENV !== 'production') {
-    const axe = require('@axe-core/react')
+    import axe = require('@axe-core/react')
+
     axe(react, reactDOM, delay)
   }
 }

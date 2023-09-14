@@ -8,13 +8,10 @@ import {
   getSelectedItemTextArgsType,
   getItemsDefaultSelectedArgsType,
   getItemsRandomSelectedArgsType,
-} from './types';
+} from './types'
 
 export function getCurrentIndex(indexItems: indexItemsType) {
-  return (
-    indexItems?.filter((indexItem: indexItemType) => indexItem.isCurrent)[0]
-      ?.index ?? -1
-  );
+  return indexItems?.filter((indexItem: indexItemType) => indexItem.isCurrent)[0]?.index ?? -1
 }
 
 export function getIndexItems(items: itemsType) {
@@ -23,46 +20,40 @@ export function getIndexItems(items: itemsType) {
       ...item,
       index,
     })) ?? []
-  );
+  )
 }
 
-export function getIndexItemsWithSelected(
-  indexItems: indexItemsType,
-  selectedItem: indexItemType
-) {
+export function getIndexItemsWithSelected(indexItems: indexItemsType, selectedItem: indexItemType) {
   return (
     indexItems?.map((indexItem: indexItemType) => ({
       ...indexItem,
       isSelected: indexItem.index === selectedItem.index,
     })) ?? []
-  );
+  )
 }
 
 export function getRandomItemFromArray<T>(array: Array<T>) {
-  return array?.[Math.floor(Math.random() * array?.length)]; // eslint-disable-line no-unsafe-optional-chaining
+  return array?.[Math.floor(Math.random() * array?.length)] // eslint-disable-line no-unsafe-optional-chaining
 }
 
 export function getRange(getRangeArgs: getRangeArgsType) {
-  const { range, indexSeed = 0, valueSeed = 0 } = getRangeArgs;
+  const { range, indexSeed = 0, valueSeed = 0 } = getRangeArgs
 
   return Array(range)
     .fill(undefined)
-    .map((_, index) => valueSeed + index + indexSeed);
+    .map((_, index) => valueSeed + index + indexSeed)
 }
 
 export function getSelectedItem({ items }: getSelectedItemArgsType) {
-  return items?.find(({ isSelected }) => isSelected === true);
+  return items?.find(({ isSelected }) => isSelected === true)
 }
 
 export function getSelectedItemText({ items }: getSelectedItemTextArgsType) {
-  return items?.find(({ isSelected }) => isSelected === true)?.text;
+  return items?.find(({ isSelected }) => isSelected === true)?.text
 }
 
-export function getItemsDefaultSelected({
-  defaultItems,
-  items,
-}: getItemsDefaultSelectedArgsType) {
-  let result;
+export function getItemsDefaultSelected({ defaultItems, items }: getItemsDefaultSelectedArgsType) {
+  let result
 
   if (defaultItems && items) {
     result = [
@@ -82,11 +73,11 @@ export function getItemsDefaultSelected({
         isSelected: name === items[0].name,
         ...rest,
       })),
-    ];
+    ]
   }
 
   if (defaultItems && !items) {
-    result = null;
+    result = null
   }
 
   if (!defaultItems && items) {
@@ -96,20 +87,18 @@ export function getItemsDefaultSelected({
       text: name,
       isSelected: name === items[0].name,
       ...rest,
-    }));
+    }))
   }
 
   if (!defaultItems && !items) {
-    result = null;
+    result = null
   }
 
-  return result;
+  return result
 }
 
-export function getItemsRandomSelected({
-  items,
-}: getItemsRandomSelectedArgsType) {
-  const randomItem = getRandomItemFromArray(items?.map(({ name }) => name));
+export function getItemsRandomSelected({ items }: getItemsRandomSelectedArgsType) {
+  const randomItem = getRandomItemFromArray(items?.map(({ name }) => name))
 
   return items.map(({ id, name, ...rest }) => ({
     id,
@@ -117,5 +106,5 @@ export function getItemsRandomSelected({
     text: name,
     isSelected: name === randomItem,
     ...rest,
-  }));
+  }))
 }
