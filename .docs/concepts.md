@@ -47,63 +47,63 @@
 
 ## 📗 Component Driven Development
 
-> Component driven development is applied using atomic design and uses the following [@papillonbits/components](https://papillonbits.github.io/papillonbits) for atoms and molecules.
+> Component driven development is applied using atomic design and uses the following [@papillonarts/components](https://papillonarts.github.io/papillonarts) for atoms and molecules.
 
 ### 📖&nbsp; Alert
 
-- [Component](https://papillonbits.github.io/papillonbits/?path=/story/primer-molecule-alert), [Storybook](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Alert)
+- [Component](https://papillonarts.github.io/papillonarts/?path=/story/primer-molecule-alert), [Storybook](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Alert)
 
 ### 📖&nbsp; Button
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Button), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-button)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Button), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-button)
 
 ### 📖&nbsp; Dropdown
 
-- [Component](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-dropdown), [Storybook](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Dropdown)
+- [Component](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-dropdown), [Storybook](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Dropdown)
 
 ### 📖&nbsp; Form Input
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Form/Input), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-form-input)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Form/Input), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-form-input)
 
 ### 📖&nbsp; Grid FlexGrid
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Grid/FlexGrid), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-molecule-grid-flexgrid)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Grid/FlexGrid), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-molecule-grid-flexgrid)
 
 ### 📖&nbsp; Icon
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Icon), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-icon--all-icons)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Icon), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-icon--all-icons)
 
 ### 📖&nbsp; Label
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Label), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-label)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Label), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-label)
 
 ### 📖&nbsp; Navigation TabNav
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Navigation/TabNav), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-molecule-navigation-tabnav)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Navigation/TabNav), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-molecule-navigation-tabnav)
 
 ### 📖&nbsp; Pagination PreviousNext
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Pagination/PreviousNext), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-pagination-previousnext)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Pagination/PreviousNext), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-pagination-previousnext)
 
 ### 📖&nbsp; Select
 
-- [Component](https://github.com/papillonbits/papillonbits/blob/master/packages/components/src/primer/Select), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-select)
+- [Component](https://github.com/papillonarts/papillonarts/blob/master/packages/components/src/primer/Select), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-select)
 
 ### 📖&nbsp; Subhead
 
-- [Component](https://github.com/papillonbits/papillonbits/tree/master/packages/components/src/primer/Subhead), [Storybook](https://papillonbits.github.io/papillonbits/?path=/story/primer-atom-subhead)
+- [Component](https://github.com/papillonarts/papillonarts/tree/master/packages/components/src/primer/Subhead), [Storybook](https://papillonarts.github.io/papillonarts/?path=/story/primer-atom-subhead)
 
 ## 📗 CSS Architecture
 
-> CSS architecture is applied using [@papillonbits/css](https://github.com/papillonbits/papillonbits/tree/master/packages/css/src/primer) design tokens and CSS scoping is adressed using `CSS Modules` configured in `webpack` setup.
+> CSS architecture is applied using [@papillonarts/css](https://github.com/papillonarts/papillonarts/tree/master/packages/css/src/primer) design tokens and CSS scoping is adressed using `CSS Modules` configured in `webpack` setup.
 
 ## 📗 Library
 
-> Library is applied using [@papillonbits/library](https://github.com/papillonbits/papillonbits/tree/master/packages/library/src) for leveraging common generic functionality.
+> Library is applied using [@papillonarts/library](https://github.com/papillonarts/papillonarts/tree/master/packages/library/src) for leveraging common generic functionality.
 
 ## 📗 Setup
 
-> Setup is applied using [@papillonbits/setup](https://github.com/papillonbits/papillonbits/tree/master/packages/setup/src) to setup `babel`, `eslint`, `jest`, `prettier`, `storybook`, `stylelint` and `webpack`.
+> Setup is applied using [@papillonarts/setup](https://github.com/papillonarts/papillonarts/tree/master/packages/setup/src) to setup `babel`, `eslint`, `jest`, `prettier`, `storybook`, `stylelint` and `webpack`.
 
 ## 📗 Local Development
 
