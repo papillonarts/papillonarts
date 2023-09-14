@@ -15,6 +15,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'airbnb',
@@ -32,7 +33,7 @@ module.exports = {
     renderMount: false,
     renderShallow: false,
   },
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -40,14 +41,15 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', 'jsx-a11y', 'jest', 'prettier'],
+  plugins: ['react', 'react-hooks', 'jsx-a11y', 'jest', 'prettier', '@typescript-eslint'],
+  root: true,
   rules: {
     'comma-dangle': 2,
     'import/named': 2,
     'import/no-extraneous-dependencies': [
       0,
       {
-        devDependencies: ['**/*.test.js', '**/*.story.js'],
+        devDependencies: ['**/*.test.js', '**/*.story.js', '**/*.test.ts', '**/*.story.ts'],
       },
     ],
     'import/prefer-default-export': 'off',
@@ -61,7 +63,7 @@ module.exports = {
     'react/jsx-filename-extension': [
       2,
       {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     ],
     'react/jsx-fragments': 0,
@@ -69,15 +71,29 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     semi: ['error', 'never'],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
   settings: {
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
       alias: {
         map: [['@papillonarts/components', '@papillonarts/components/build']],
-        extensions: ['.js'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
       node: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
     react: {

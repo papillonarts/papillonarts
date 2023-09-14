@@ -1,17 +1,17 @@
 {
-  "packages/components/src/**/*.{js,jsx}": [
-    "eslint --ext .js --ext .jsx packages/components/src/**/**/*.{js,jsx} --fix",
-    "prettier --write \"packages/components/src/**/**/*.{js,jsx}\"",
+  "packages/components/src/**/*.{js,jsx,ts,tsx}": [
+    "eslint --ext .js,.jsx,.ts,.tsx packages/components/src/**/**/*.{js,jsx,ts,tsx} --fix",
+    "prettier --write \"packages/components/src/**/**/*.{js,jsx,ts,tsx}\"",
     "git add"
   ],
-  "packages/library/src/**/*.js": [
-    "eslint --ext .js --ext .jsx packages/library/src/**/**/*.js --fix",
-    "prettier --write \"packages/library/src/**/**/*.js\"",
+  "packages/library/src/**/*.{js,ts}": [
+    "eslint --ext .js,.ts packages/library/src/**/**/*.{js,ts} --fix",
+    "prettier --write \"packages/library/src/**/**/*.{js,ts}\"",
     "git add"
   ],
-  "packages/setup/src/**/*.js": [
-    "eslint --ext .js --ext .jsx packages/setup/src/**/**/*.js --fix",
-    "prettier --write \"packages/setup/src/**/**/*.js\"",
+  "packages/setup/src/**/*.{js,ts}": [
+    "eslint --ext .js,.ts packages/setup/src/**/**/*.{js,ts} --fix",
+    "prettier --write \"packages/setup/src/**/**/*.{js,ts}\"",
     "git add"
   ],
   "packages/components/src/**/*.scss": [
