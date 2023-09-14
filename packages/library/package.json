@@ -31,7 +31,9 @@
     "clean-up": "rm -rf build node_modules package-lock.json",
     "install-packages": "npm i",
     "install-papillonarts-latest": "echo \"library skipping install-papillonarts-latest\" && exit 0",
-    "build": "rm -rf build && tsc",
+    "build:js": "babel --extensions .js,.jsx --no-copy-ignored --out-dir build src --ignore **/__tests__",
+    "build:ts": "tsc",
+    "build": "rm -rf build && npm-run-all build:js build:ts",
     "build-test": "npm run build",
     "build-acceptance": "npm run build",
     "build-release": "npm run build"
