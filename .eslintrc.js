@@ -81,6 +81,16 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'no-unused-vars': 'off',
+    'no-shadow': 'off',
+    'react/prop-types': 'off',
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: ['function-declaration', 'arrow-function'],
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
