@@ -1,1 +1,1 @@
-export const primer = {}
+export { primer } from './primer'
