@@ -21,6 +21,17 @@ function getStorybookMainSetup({ storiesBasePath, includeBasePath, modulesBasePa
 		// https://storybook.js.org/docs/react/api/main-config-stories
 		stories: [storiesBasePath],
 
+		typescript: {
+			reactDocgen: 'react-docgen-typescript',
+			reactDocgenTypescriptOptions: {
+				compilerOptions: {
+					allowSyntheticDefaultImports: false,
+					esModuleInterop: false,
+				},
+				propFilter: () => true,
+			},
+		},
+
 		// https://storybook.js.org/docs/react/api/main-config-addons
 		// https://storybook.js.org/docs/react/addons/introduction
 		// https://storybook.js.org/integrations
@@ -248,12 +259,11 @@ function getStorybookMainSetup({ storiesBasePath, includeBasePath, modulesBasePa
 	}
 }
 
-// const storiesBasePath = path.resolve(__dirname, '../../papillonarts/packages/components/src/primer/**/__tests__/*.int.story.@(js|mdx)')
-// const includeBasePath = path.resolve(__dirname, '../packages/components/src/primer/**/__tests__/*')
-// const modulesBasePath = path.resolve(__dirname, '../packages')
-
-const storiesBasePath = path.resolve(__dirname)
-const includeBasePath = path.resolve(__dirname)
+const storiesBasePath = path.resolve(
+	__dirname,
+	'../../papillonarts/packages/components/src/primer/**/__tests__/*.int.story.@(js|jsx|mjs|ts|tsx)',
+)
+const includeBasePath = path.resolve(__dirname, '../packages/components/src/primer/**/__tests__/*')
 const modulesBasePath = path.resolve(__dirname, '../packages')
 
 module.exports = getStorybookMainSetup({ storiesBasePath, includeBasePath, modulesBasePath })
