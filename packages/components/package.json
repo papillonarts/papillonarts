@@ -1,6 +1,6 @@
 {
   "name": "@papillonarts/components",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Papillon Arts Components",
   "homepage": "https://github.com/papillonarts/papillonarts/tree/master/packages/components",
   "repository": {
@@ -29,7 +29,7 @@
     "build-release": "npm run build"
   },
   "dependencies": {
-    "@papillonarts/css": "^0.2.0",
-    "@papillonarts/library": "^0.2.0"
+    "@papillonarts/css": "^0.3.0",
+    "@papillonarts/library": "^0.3.0"
   }
 }
