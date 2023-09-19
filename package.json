@@ -55,9 +55,9 @@
   },
   "dependencies": {
     "@axe-core/react": "^4.7.3",
-    "@papillonarts/components": "^0.3.0",
-    "@papillonarts/library": "^0.3.0",
-    "@papillonarts/setup": "^0.3.0",
+    "@papillonarts/components": "^0.4.0",
+    "@papillonarts/library": "^0.4.0",
+    "@papillonarts/setup": "^0.4.0",
     "@primer/primitives": "^7.13.0",
     "classnames": "^2.3.2",
     "clean-webpack-plugin": "^4.0.0",
@@ -77,7 +77,7 @@
     "redux-thunk": "^2.4.2",
     "uuid": "^9.0.1",
     "whatwg-fetch": "^3.6.19"
-  },  
+  },
   "devDependencies": {
     "@babel/cli": "^7.22.15",
     "@babel/core": "^7.22.20",
