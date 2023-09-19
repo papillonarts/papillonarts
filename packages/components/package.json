@@ -21,10 +21,9 @@
     "remove-test-folders": "rm -rf src/**/**/__tests__ && rm -rf src/**/**/**/__tests__ && rm -rf src/primer/Concept",
     "remove-snapshot-folders": "rm -rf src/**/**/__tests__/__snapshots__",
     "remove-build-folder": "rm -rf build",
-    "transpile:js": "babel --extensions .js,.jsx --no-copy-ignored --out-dir build src --ignore **/__tests__",
-    "transpile:ts": "tsc",
+    "transpile:js:ts": "babel --extensions .js,.jsx,.ts,.tsx --no-copy-ignored --out-dir build src --ignore **/__tests__",
     "remove-markdown-files": "find build -maxdepth 3 -type f -name \"*.md\" -delete",
-    "build": "npm-run-all remove-snapshot-folders remove-build-folder transpile:js transpile:ts remove-markdown-files",
+    "build": "npm-run-all remove-snapshot-folders remove-build-folder transpile:js:ts remove-markdown-files",
     "build-test": "npm run build",
     "build-acceptance": "npm run build",
     "build-release": "npm run build"
