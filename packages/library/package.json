@@ -18,13 +18,8 @@
     "browser/",
     "date/",
     "event/",
-    "hooks/",
     "number/",
     "object/",
-    "pagination/",
-    "sort/",
-    "store/",
-    "string/",
     "README.md"
   ],
   "scripts": {
