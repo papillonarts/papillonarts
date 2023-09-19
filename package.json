@@ -2,8 +2,8 @@
   "name": "papillonarts",
   "description": "Papillon Arts",
   "engines": {
-    "node": "20.6.1",
-    "npm": "9.8.1"
+    "node": "20.7.0",
+    "npm": "10.1.0"
   },
   "homepage": "https://github.com/papillonarts/papillonarts#readme",
   "repository": {
